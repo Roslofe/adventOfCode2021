@@ -5,7 +5,12 @@ object binaryDiagnostic extends App {
 
   val file = Source.fromFile("day3/binary.txt")
 
-
+  /** The program goest through eeach n;th value
+   * of each line, and determines the most common,
+   * adding it to the gamma rate. Once all numbers
+   * have been examined, the program prints the gamma
+   * rate, as well as the epsilon rate, which is the
+   * inverse of the gamma rate. */
   try {
     val allDigits = file.getLines().toVector.map(_.split("")).map(_.map(_.toInt))
     var gammaRate = "2"
